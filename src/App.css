@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;500;900&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;500;900&family=Lobster&family=Montserrat&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -5,4 +8,79 @@
 }
 .App {
   text-align: center;
+}
+main {
+  font-family: 'Heebo', sans-serif;
+}
+.landing {
+  min-height: 100vh;
+  background-image: url('https://cdn.pixabay.com/photo/2020/10/17/10/51/mountains-5661718_960_720.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0rem 5rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  min-height: 10vh;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  padding-left: 10rem;
+  font-size: 1.2rem;
+}
+#logo {
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+.big-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  font-size: 5rem;
+  font-family: 'Lobster', cursive;
+  color: rgb(62, 62, 61);
+}
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-text {
+  color: rgb(116, 155, 189);
+  font-family: 'Heebo', sans-serif;
+  font-size: 3rem;
+}
+.slider {
+  background: rgb(236, 166, 125);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+}
+.hide {
+  background: black;
+  overflow: hidden;
+}
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
 }
