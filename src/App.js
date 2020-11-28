@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './App.css';
 import gsap from 'gsap';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 function App() {
   const tl = useRef();
@@ -17,6 +18,7 @@ function App() {
       { opacity: 1, duration: 1 },
       '-=1'
     );
+    tl.current.fromTo('a', { opacity: 0 }, { opacity: 1, duration: 2 });
   });
 
   return (
@@ -31,6 +33,13 @@ function App() {
               <li>About</li>
             </ul>
           </nav>
+          <a href='https://github.com/InnervisionGit/02-animated-landing-page'>
+            <h3 className='link'>
+              <GitHubIcon />
+              &nbsp; InnervisionGit &nbsp;
+              <GitHubIcon />
+            </h3>
+          </a>
           <h2 className='big-text'>Stay Above</h2>
         </section>
       </main>

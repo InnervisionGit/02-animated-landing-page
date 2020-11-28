@@ -69,7 +69,7 @@ nav {
   transform: translateY(100%);
 }
 .intro-text {
-  color: rgb(116, 155, 189);
+  color: rgb(236, 166, 125);
   font-family: 'Heebo', sans-serif;
   font-size: 3rem;
 }
@@ -80,4 +80,15 @@ nav {
 .hide span {
   transform: translateY(100%);
   display: inline-block;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.link {
+  position: absolute;
+  font-size: 2rem;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, -30%);
 }
