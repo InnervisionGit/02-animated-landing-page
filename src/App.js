@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './App.css';
 import gsap from 'gsap';
 
 function App() {
-  const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
-  tl.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
-  tl.to('.slider', { y: '-100%', duration: 1.5, delay: 0.5 });
-  tl.to('.intro', { y: '-100%', duration: 1 }, '-=1');
-  tl.fromTo('nav', { opacity: 0 }, { opacity: 1, duration: 1 });
-  tl.fromTo('.big-text', { opacity: 0 }, { opacity: 1, duration: 1 }, '-=1');
+  const tl = useRef();
+
+  useEffect(() => {
+    tl.current = gsap.timeline({ defaults: { ease: 'power1.out' } });
+    tl.current.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
+    tl.current.to('.slider', { y: '-100%', duration: 1.5, delay: 0.5 });
+    tl.current.to('.intro', { y: '-100%', duration: 1 }, '-=1');
+    tl.current.fromTo('nav', { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.current.fromTo(
+      '.big-text',
+      { opacity: 0 },
+      { opacity: 1, duration: 1 },
+      '-=1'
+    );
+  });
+
   return (
     <div className='App'>
       <main>

@@ -6,9 +6,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-.App {
-  text-align: center;
-}
 main {
   font-family: 'Heebo', sans-serif;
 }
@@ -59,11 +56,6 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.intro-text {
-  color: rgb(116, 155, 189);
-  font-family: 'Heebo', sans-serif;
-  font-size: 3rem;
-}
 .slider {
   background: rgb(236, 166, 125);
   position: fixed;
@@ -75,6 +67,11 @@ nav {
   justify-content: center;
   align-items: center;
   transform: translateY(100%);
+}
+.intro-text {
+  color: rgb(116, 155, 189);
+  font-family: 'Heebo', sans-serif;
+  font-size: 3rem;
 }
 .hide {
   background: black;
