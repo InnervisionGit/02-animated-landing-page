@@ -10,7 +10,7 @@ function App() {
     tl.current = gsap.timeline({ defaults: { ease: 'power1.out' } });
     tl.current.to('.text', { y: '0%', duration: 1, stagger: 0.25 });
     tl.current.to('.slider', { y: '-100%', duration: 1.5, delay: 0.5 });
-    tl.current.to('.intro', { y: '-100%', duration: 1 }, '-=1');
+    tl.current.to('.intro', { y: '-100%', duration: 1 }, '-=1.2');
     tl.current.fromTo('nav', { opacity: 0 }, { opacity: 1, duration: 1 });
     tl.current.fromTo(
       '.big-text',
@@ -18,7 +18,14 @@ function App() {
       { opacity: 1, duration: 1 },
       '-=1'
     );
-    tl.current.fromTo('a', { opacity: 0 }, { opacity: 1, duration: 2 });
+    tl.current.to('.home', { x: '0%', duration: 0.33, stagger: 0.1 });
+    tl.current.to('.contact', { x: '0%', duration: 0.33, stagger: 0.1 });
+    tl.current.to('.about', { x: '0%', duration: 0.33, stagger: 0.1 });
+    tl.current.fromTo(
+      'a',
+      { opacity: 0 },
+      { opacity: 1, duration: 5, delay: 0.3 }
+    );
   });
 
   return (
@@ -28,9 +35,9 @@ function App() {
           <nav>
             <h1 id='logo'>Above</h1>
             <ul className='nav-links'>
-              <li>Home</li>
-              <li>Contact</li>
-              <li>About</li>
+              <li className='home'>Home</li>
+              <li className='contact'>Contact</li>
+              <li className='about'>About</li>
             </ul>
           </nav>
           <a href='https://github.com/InnervisionGit/02-animated-landing-page'>
